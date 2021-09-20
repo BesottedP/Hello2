@@ -5,15 +5,22 @@ public class MathE {
     {
         int numone = input % 10;
         int numten = input / 10 % 10;
-        int numhun = input / 100 % 10;
-        int swapped = (numhun + numone + numten);
-        return swapped;
+        int swapped = input - (numone+numten*10);
+        return swapped + numone * 10 + numten;
     }
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         int input = 123;
         int output = digitSwapper(input);
+        System.out.println(input +" " + output);
+
+        input = 6;
+        output = digitSwapper(input);
+        System.out.println(input +" " + output);
+
+        input = 381;
+        output = digitSwapper(input);
         System.out.println(input +" " + output);
     }
 }
